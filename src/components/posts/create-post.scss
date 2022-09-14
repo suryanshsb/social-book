@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Open+Sans&display=swap');
+@import '../sass/globals.scss';
+$font: 'Nanum Gothic',
+sans-serif;
+$font2: 'Open Sans',
+sans-serif;
+
+
+.home {
+    .post {
+        height: auto;
+        width: 90%;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+        color: #000;
+        font-family: $font2;
+
+        form {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input {
+                font-family: $font;
+            }
+
+            input[type="submit"] {
+                height: 45px;
+                width: 100%;
+                background-color: $button;
+                color: #fff;
+            }
+
+            .btn-choose {
+                background-color: $button;
+            }
+
+            .image {
+                height: auto;
+                width: auto;
+                max-width: 250px;
+                max-height: 250px;
+                padding: 10px;
+
+                img {
+                    height: auto;
+                    width: auto;
+                    max-height: 90%;
+                    max-width: 90%;
+                    border-radius: 5px;
+                }
+            }
+
+        }
+    }
+}
+
+
+//Single Post CSS
+.single-post {
+    height: 70vh;
+    width: 75vw;
+    display: flex;
+
+    .post-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 70%;
+        max-height: 600px;
+
+        img {
+            height: auto;
+            max-height: 100%;
+            width: auto;
+            max-width: 100%;
+            border-radius: 25px;
+        }
+    }
+
+    .post-info {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding-top: 30px;
+        margin-left: 30px;
+        width: auto;
+        max-width: 40%;
+
+        .user {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            color: #fff;
+            flex-direction: column;
+            gap: 5px;
+
+            span {
+                width: 100%;
+            }
+
+            greyscale {
+                font-size: 14px;
+                color: rgb(143, 143, 143);
+            }
+
+        }
+
+        .caption {
+            font-size: 14px;
+        }
+
+        span {
+            font-size: 22px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (min-width:250px) and (max-width:1200px) {
+    .home .post {
+        width: 90vw;
+    }
+
+    .single-post {
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding-top: 15px;
+        width: 95vw;
+
+        .post-image {
+            height: auto;
+            min-height: 300px;
+            width: 100%;
+            margin-left: 4vw;
+
+            img {
+                min-height: 300px;
+                width: auto;
+                max-height: 450px;
+
+            }
+        }
+    }
+
+    .single-post .post-info {
+        max-width: 90% !important;
+    }
+
+}

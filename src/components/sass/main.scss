@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Open+Sans&display=swap');
+@import '../sass/globals.scss';
+$font2: 'Open Sans',
+sans-serif;
+
+.login {
+    height: 100vh;
+    width: 100vw;
+    background-color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+        height: auto;
+        width: 35vw;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.5);
+        font-family: $font2;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+            font-size: 20px;
+        }
+
+        button {
+            height: 45px;
+            width: auto;
+            border: none;
+            font-family: $font2;
+            background-color: $button;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        input {
+            font-size: 16px !important;
+        }
+    }
+}
+
+//Media Quries For Mobiles
+@media (min-width:250px) and (max-width:1024px) {
+
+    .login .form {
+        width: 80vw;
+    }
+}
